@@ -307,7 +307,7 @@ function MakeParser(grammar)
 	end
 	local function MakeEofRule()
 		return function(ctx)
-			if ctx.ptr > #ctx.source then
+			if ctx.pos > #ctx.source then
 				return true, "", ""
 			else
 				return false
